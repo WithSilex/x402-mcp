@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.withsilex/x402-mcp",
+  "title": "With Silex x402 MCP",
+  "description": "Search 48 live data feeds and settle HTTP 402 unlocks in ~350ms via feeless Nano (XNO).",
+  "version": "1.8.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@withsilex/x402-mcp",
+      "version": "1.8.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "NANO_PRIVATE_KEY",
+          "description": "Optional 64-hex local Nano burner key for 1-call HTTP 402 unlocks.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "SILEX_MAX_AUTO_USD",
+          "description": "Maximum USD equivalent per autonomous unlock (default 0.10).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://withsilex.com/mcp"
+    }
+  ]
+}

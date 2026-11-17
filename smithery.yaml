@@ -1,0 +1,21 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      nanoPrivateKey:
+        type: string
+        description: Optional 64-hex local Nano burner private key for 1-call HTTP 402 unlocks
+      maxAutoUsd:
+        type: string
+        default: "0.10"
+        description: Maximum USD equivalent allowed per autonomous unlock
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@withsilex/x402-mcp'],
+      env: {
+        NANO_PRIVATE_KEY: config.nanoPrivateKey || '',
+        SILEX_MAX_AUTO_USD: config.maxAutoUsd || '0.10'
+      }
+    })
