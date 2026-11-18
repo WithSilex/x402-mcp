@@ -1,5 +1,7 @@
 # @withsilex/x402-mcp
 
+[![mcptry](https://mcptry.com/badge/com.withsilex/x402-mcp)](https://mcptry.com/servers/com.withsilex/x402-mcp)
+
 Official **Model Context Protocol (MCP)** server connecting **Claude Desktop, Cursor, Windsurf, Cline, and autonomous AI agents** to the **With Silex HTTP 402 Permanent Data Encyclopedia** (`https://withsilex.com/directory`).
 
 - **48 Live Autonomous Subdomains + 5 Cross-Domain Alpha Syntheses** updated every 15 minutes (SEC EDGAR, DHS CISA Zero-Day CVEs, USAspending Federal Contracts, NOAA Aviation METARs, ERCOT Grid, NIH ClinicalTrials.gov, FDA Recalls, USGS Seismic, arXiv, Kraken L1/L2 Orderbooks).

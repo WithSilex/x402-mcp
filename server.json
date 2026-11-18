@@ -3,7 +3,21 @@
   "name": "com.withsilex/x402-mcp",
   "title": "With Silex x402 MCP",
   "description": "Search 48 live data feeds and settle HTTP 402 unlocks in ~350ms via feeless Nano (XNO).",
-  "version": "1.8.1",
+  "version": "1.8.2",
+  "websiteUrl": "https://withsilex.com",
+  "repository": {
+    "url": "https://github.com/WithSilex/x402-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://withsilex.com/favicon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "1080x1080"
+      ]
+    }
+  ],
   "packages": [
     {
       "registryType": "npm",
