@@ -1,34 +1,49 @@
-# @withsilex/x402-mcp
+# @withsilex/x402-mcp — HTTP 402 & Feeless Nano ($XNO) MCP Server
 
-[![mcptry](https://mcptry.com/badge/com.withsilex/x402-mcp)](https://mcptry.com/servers/com.withsilex/x402-mcp)
+Official Model Context Protocol (MCP) server and benchmark suite for **[With Silex](https://withsilex.com)** — the dual-rail `HTTP 402 Payment Required` paywall engine and 48-subdomain 15-minute live telemetry encyclopedia settling sub-cent unlocks (**$0.001+ USD**) in **~350ms** on pure Nano (`$XNO`) with **$0.000000 network gas** and **99% creator net keep**.
 
-Official **Model Context Protocol (MCP)** server connecting **Claude Desktop, Cursor, Windsurf, Cline, and autonomous AI agents** to the **With Silex HTTP 402 Permanent Data Encyclopedia** (`https://withsilex.com/directory`).
+## Quick Start (Zero-Install Remote HTTP or Local CLI)
 
-- **48 Live Autonomous Subdomains + 5 Cross-Domain Alpha Syntheses** updated every 15 minutes (SEC EDGAR, DHS CISA Zero-Day CVEs, USAspending Federal Contracts, NOAA Aviation METARs, ERCOT Grid, NIH ClinicalTrials.gov, FDA Recalls, USGS Seismic, arXiv, Kraken L1/L2 Orderbooks).
-- **Hyper-Specific Keyword & Schema Field Search (`<15ms`):** Query exact phrases, tickers, CVE IDs, airport ICAOs, or `key:field` filters and unlock single snapshots (`$0.001+`) or 25%-discounted Whole-Keyword JSONL Bundles.
-- **Zero-Fee ~350ms Settlement:** Powered natively by **Nano (`XNO`)** on-chain block proofs (`X-Payment: <64_HEX_HASH>`), with built-in Nanswap cross-chain instructions for agents starting with USDC, SOL, ETH, or BTC.
+### Option A: Remote Streamable HTTP MCP (15 Tools — Claude, Cursor, Grok, VS Code)
+- **Server URL:** `https://withsilex.com/mcp` (No API key required for search, live pulse, and SHA-256 PoW trial tools).
 
-## Quick Install (Claude Desktop / Cursor / Windsurf)
-
+### Option B: Local CLI / Auto-Signing Stdio MCP (6 Tools via npm)
 ```json
 {
   "mcpServers": {
     "withsilex-x402": {
       "command": "npx",
-      "args": ["-y", "@withsilex/x402-mcp"],
-      "env": {
-        "NANO_PRIVATE_KEY": "OPTIONAL_64_HEX_LOCAL_BURNER_KEY",
-        "SILEX_MAX_AUTO_USD": "0.10"
-      }
+      "args": ["-y", "@withsilex/x402-mcp"]
     }
   }
 }
 ```
+- **Unfunded Zero-Balance Trial:** Claim 1 free sample unlock immediately via SHA-256 Proof-of-Work (`https://withsilex.com/api/x402/first-taste`).
+- **Non-Nano Agent Bridge:** Swap $1.50 USDC/SOL/ETH once via Nanswap (`https://withsilex.com/api/v1/nanswap/get-estimate?from=USDC&to=XNO&amount=1.5`) to fund **375 to 1,500 zero-gas unlocks**.
 
-## Included MCP Tools
-1. `silex_hyper_search` - Search all permanent paywalls by keyword, exact phrase, or `key:field` operator.
-2. `silex_suggest_entities` - Instant autocomplete of indexed CVEs, tickers, ICAOs, NCTs, and JSON schema keys.
-3. `silex_live_pulse` - Fetch all 48 live subdomain feeds, 5 Cross-Domain Synthesis drops, and the 15m mint countdown.
-4. `silex_inspect_402_challenge` - Inspect any HTTP 402 URL, Free Sample Record #1, Nano `payTo` address, `amountRaw`, and Nanswap USDC/SOL -> XNO burner top-up endpoints.
-5. `silex_unlock_with_tx_hash` - Submit a 64-hex Nano send block hash via `X-Payment` to unlock any single drop, synthesis, 24h stream, or Whole-Keyword JSONL bundle.
-6. `silex_auto_pay_and_unlock` - Sign, broadcast, and unlock an HTTP 402 resource in one call using your local `NANO_PRIVATE_KEY` (strictly non-custodial; capped by `SILEX_MAX_AUTO_USD`).
+---
+
+## 2026 Sub-Cent HTTP 402 Payout & Agent Cost Benchmark ($0.001 / $0.004 / $0.02)
+
+| Unlock Price | With Silex (Pure $XNO / 1% Fee) | x402 + Coinbase Facilitator (Post-1k Free Tier) | Cloudflare Monetization Gateway | Stripe MPP (Tempo / SPT) | Card Paywalls (2.9% + $0.30) |
+|---|---|---|---|---|---|
+| **$0.001** | **$0.00099 net (99%)** / **$0.001** cost ($0 gas, ~350ms) | **$0.000 net (0%)** after $0.001/tx fee unless batched | Closed US beta; requires full Cloudflare DNS proxy | Not viable atomically ($0.01 USDC / $0.50 card min) | Impossible ($0 net) |
+| **$0.004** | **$0.00396 net (99%)** / **$0.004** cost ($0 gas, ~350ms) | **~$0.0030 net (75%)** after $0.001/tx fee | Closed US beta; unpublished platform cut | Session accrual required below $0.01 | Impossible ($0 net) |
+| **$0.020** | **$0.01980 net (99%)** / **$0.020** cost ($0 gas, ~350ms) | **~$0.0190 net (95%)** after $0.001/tx fee | Closed US beta; Base USDC only | Viable on USDC ($0.01+); blocked on $0.50 card SPT | Impossible ($0 net) |
+
+### Live Token Efficiency Benchmark (CISA KEV `CVE-2026-115731`)
+| Metric | Raw Upstream HTML/XML Scrape | With Silex x402 Normalized JSON |
+|---|---|---|
+| **LLM Input Tokens** | ~46,400 | **~590 (98.7% reduction)** |
+| **Unlock Cost** | — | **$0.004 USD (Nano $XNO, $0 gas)** |
+| **Est. LLM Context Saved** | — | **~$0.137 USD (~34x cheaper net run)** |
+
+---
+
+## Creator & Publisher Guides (WordPress, HTML & HTTP 402)
+- **How Creators Monetize AI Agents & Humans Together:** Drop `<script src="https://withsilex.com/kit.js" async></script>` onto any site or mint a hosted vault at [withsilex.com/publish](https://withsilex.com/publish). Humans unlock in 1 tap (30-day pass); AI crawlers settle `HTTP 402` challenges in ~350ms while you keep **99% net**.
+- **WordPress 1-Click Micro-Paywall Plugin (`silex-paywall` v1.2.7):** Protect WordPress posts and downloads from $0.001 using our Gutenberg Paywall Vault block or `[silex_lock]` shortcode with AES-256-GCM edge encryption — full setup at [withsilex.com/monetize/wordpress-paywall-plugin](https://withsilex.com/monetize/wordpress-paywall-plugin).
+- **Full 12-Platform Fee Calculator & Specs:** [withsilex.com/compare](https://withsilex.com/compare) | [compare.md](https://withsilex.com/compare.md) | [skill.md](https://withsilex.com/skill.md) | [Live Mainnet Ledger](https://withsilex.com/ledger)
+
+## License
+MIT © With Silex (`contact@withsilex.com`)

@@ -25,7 +25,7 @@ async function rpcCall(bodyObj) {
 export function createSilexMcpServer() {
   const server = new McpServer({
     name: "withsilex-x402-mcp",
-    version: "1.6.2"
+    version: "1.8.1"
   });
 
   // Tool 1: Hyper-Specific Keyword & Field Search
@@ -80,7 +80,7 @@ export function createSilexMcpServer() {
     "Inspect an HTTP 402 paywall URL (single drop, /synthesis/*, /bundle/24h, or /topics/* bulk pack) to read its Free Sample Record #1, exact Nano payTo address, amountRaw, and Nanswap cross-chain bridge instructions.",
     { url: z.string().url().describe("Target With Silex URL to inspect") },
     async ({ url }) => {
-      const r = await fetch(url, { headers: { Accept: "application/json", "User-Agent": "WithSilex-MCP/1.6.2" } });
+      const r = await fetch(url, { headers: { Accept: "application/json", "User-Agent": "WithSilex-MCP/1.8.1" } });
       const txt = await r.text();
       return { content: [{ type: "text", text: JSON.stringify({ httpStatus: r.status, challenge: JSON.parse(txt) }, null, 2) }] };
     }
@@ -99,7 +99,7 @@ export function createSilexMcpServer() {
         headers: {
           Accept: "application/json",
           "X-Payment": txHash.trim().toUpperCase(),
-          "User-Agent": "WithSilex-MCP/1.6.2"
+          "User-Agent": "WithSilex-MCP/1.8.1"
         }
       });
       const body = await r.text();
@@ -125,7 +125,7 @@ export function createSilexMcpServer() {
         };
       }
       const maxUsd = parseFloat(process.env.SILEX_MAX_AUTO_USD || "0.10") || 0.10;
-      const chRes = await fetch(url, { headers: { Accept: "application/json", "User-Agent": "WithSilex-MCP/1.6.2" } });
+      const chRes = await fetch(url, { headers: { Accept: "application/json", "User-Agent": "WithSilex-MCP/1.8.1" } });
       if (chRes.status === 200) return { content: [{ type: "text", text: await chRes.text() }] };
       if (chRes.status !== 402) throw new Error("Expected HTTP 402 challenge, received HTTP " + chRes.status);
 
@@ -157,7 +157,7 @@ export function createSilexMcpServer() {
 
       await new Promise((r) => setTimeout(r, 450));
       const unlockRes = await fetch(url, {
-        headers: { Accept: "application/json", "X-Payment": txHash, "User-Agent": "WithSilex-MCP/1.6.2" }
+        headers: { Accept: "application/json", "X-Payment": txHash, "User-Agent": "WithSilex-MCP/1.8.1" }
       });
       return { content: [{ type: "text", text: await unlockRes.text() }] };
     }
